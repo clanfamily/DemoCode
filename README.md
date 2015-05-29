@@ -13,11 +13,14 @@ Mittels LESS wird CSS über den Compiler "prepros.io" compiliert. Im eigentliche
 mit verschiedenen CSS Dateien eingebunden worden um so eine unterschiedliche Darstellung der Artikelgruppen zu bekommen.
 
 ###ToDo:
+
 **mySQL**
+
 Eine Demodatenbank mit Kunden, Adressen und Retouren soll noch ein Beispiel liefern. Dabei sollen Kunden mit
 Rechnungs und Lieferaderssen mittels JOIN kombiniert werden. Ein Unternehmen kann z.B. mehrere Lieferadressen haben.
 
 **PHP**
+
 Erstellt werden die Klassen "Kunde", "Adressen", "Retouren" und zur Ausgabe gebracht.
 
 
