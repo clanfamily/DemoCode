@@ -1,0 +1,73 @@
+div.DatenBox {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  display: table;
+  table-layout: fixed;
+  width: 720px;
+  min-height: 180px;
+  font-size: 14px;
+}
+div.links {
+  background-image: url("../img/artikel_layout_links.jpg");
+  background-repeat: no-repeat;
+}
+div.rechts {
+  background-image: url("../img/artikel_layout_rechts.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+div.textblock_links {
+  padding-top: 30px;
+  padding-left: 30px;
+  max-width: 450px;
+  display: inline-block;
+  font-size: 14px;
+}
+div.textblock_rechts {
+  padding-top: 30px;
+  padding-left: 60px;
+  max-width: 450px;
+  display: inline-block;
+  font-size: 14px;
+}
+div.extern {
+  font-size: 18px;
+  font-weight: bold;
+}
+div.marketing {
+  font-size: 14px;
+}
+div.marketing ul {
+  list-style-position: outside;
+  font-size: 14px;
+}
+div.marketing li {
+  font-size: 14px;
+  list-style-position: outside;
+}
+div.marketing img {
+  max-width: 450px;
+}
+div.bild_links {
+  display: inline-block;
+  display: table-cell;
+  vertical-align: top;
+  width: 180px;
+  height: 160px;
+}
+div.bild_links img {
+  max-width: 180px;
+  max-height: 160px;
+}
+div.bild_rechts {
+  display: inline-block;
+  display: table-cell;
+  float: right;
+  vertical-align: top;
+  width: 180px;
+  height: 160px;
+}
+div.bild_rechts img {
+  max-width: 180px;
+  max-height: 160px;
+}

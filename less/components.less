@@ -1,0 +1,88 @@
+
+// Datenbox - Grundrahmen
+div.DatenBox {
+  font-family: @font-family-base;
+  background-color: @base-background-color;
+  display:          table;
+  table-layout:     fixed;
+  width:            @size-container-max;
+  min-height:       @size-container-min-height;
+  font-size:        @font-size-base;
+}
+
+// Datenbox Hintergrund
+div.links {
+  background-image: url(@background-links);
+  background-repeat:no-repeat;
+}
+div.rechts {
+  background-image: url(@background-rechts);
+  background-repeat:no-repeat;
+  background-position: bottom;
+}
+
+// Datenbox Textblöcke
+div.textblock_links{
+  padding-top:      30px;
+  padding-left:     30px;
+  max-width:        @size-textblock-max;
+  display:          inline-block;
+  font-size:        @font-size-base;
+}
+div.textblock_rechts{
+  padding-top:      30px;
+  padding-left:     60px;
+  max-width:        @size-textblock-max;
+  display:          inline-block;
+  font-size:        @font-size-base;
+}
+
+// Datenbox externe Bezeichnung / Titel
+div.extern {
+  font-size:        @font-size-large;
+  font-weight:      bold;
+}
+
+
+div.marketing {
+  font-size:            @font-size-base;
+}
+div.marketing ul{
+  list-style-position:  outside;
+  font-size:            @font-size-base;
+}
+div.marketing li{
+  font-size:            @font-size-base;
+  list-style-position:  outside;
+}
+div.marketing  img{
+  max-width:            @size-textblock-max;
+}
+
+
+// Artikelbilder
+div.bild_links {
+  display:          inline-block;
+  display:          table-cell;
+  vertical-align:   top;
+  width:            @size-artikelbild-width;
+  height:           @size-artikelbild-height;
+}
+
+div.bild_links img {
+  max-width:        @size-artikelbild-width;
+  max-height:       @size-artikelbild-height;
+}
+
+div.bild_rechts {
+  display:          inline-block;
+  display:          table-cell;
+  float:            right;
+  vertical-align:   top;
+  width:            @size-artikelbild-width;
+  height:           @size-artikelbild-height;
+}
+div.bild_rechts img {
+  max-width:        @size-artikelbild-width;
+  max-height:       @size-artikelbild-height;
+}
