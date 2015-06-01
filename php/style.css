@@ -1,0 +1,79 @@
+/*
+ Import mit Compiler: prepos.io
+ Ausgabe: style.css
+ Einsatz: Styling Kaugummilager - Demo
+ Autor:   Mirco Baumann
+*/
+/*
+ Variablen # werden im Compile Prozess nicht mit in die CSS geschrieben
+ Sie finden die Liste der Variablen unter /less/variable.less
+*/
+/*
+ Die wenigen Komponenten des HTML Codes habe ich hier ausnahmsweise in
+ einer einzelnen Datei zusammengefasst. Bei mehreren Objekte teile ich
+ die LESS Parts in deren Einzelteile (am Beispiel Bootstrap) auf.
+*/
+/* div.content umschließt den gesamten Inhaltsblock */
+main {
+  position: relative;
+  background: white;
+  height: 800px;
+  width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+  overflow: auto;
+}
+/* Tabellen Grundeinstellung */
+table {
+  border-collapse: collapse;
+  min-width: 660px;
+  margin-bottom: 10px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+/* Table Head optisch absetzen */
+th {
+  font-size: 24px;
+  text-align: left;
+  background: #999999;
+}
+/* Verhalten bei geraden und ungraden Tabellenreihen inkl. Hover&Pointer Effekt*/
+tr:nth-child(even) {
+  background: #DDDDDD;
+}
+tr:nth-child(even):hover {
+  background-color: #46cce8;
+  cursor: pointer;
+}
+tr:nth-child(odd) {
+  background: #EEEEEE;
+}
+tr:nth-child(odd):hover {
+  background-color: #33ffee;
+  cursor: pointer;
+}
+/* Preisfeld hervorheben durch Formatierung */
+td.preis {
+  text-align: center;
+  font-weight: bold;
+}
+/* Setzte automatisch ein Euro-Zeichen hinter dem Preis */
+span.preis::after {
+  content: " €";
+}
+/* Button Formatierung*/
+input.button {
+  float: right;
+  font-weight: bold;
+  font-size: 11px;
+  background-color: rgba(255, 51, 51, 0.4);
+  border-radius: 15px 0px;
+  padding: 5px;
+}
+input.button:hover {
+  background-color: rgba(255, 51, 51, 0.9);
+}

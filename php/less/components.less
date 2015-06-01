@@ -1,0 +1,68 @@
+/* div.content umschließt den gesamten Inhaltsblock */
+main {
+  position: relative;
+  background: white;
+  height: 800px;
+  width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+  overflow: auto;
+}
+
+
+/* Tabellen Grundeinstellung */
+table {
+  border-collapse: collapse;
+  min-width: 660px;
+  margin-bottom: 10px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+/* Table Head optisch absetzen */
+th {
+  font-size: @font-size-h3;
+  text-align: left;
+  background: @th-background-color;
+}
+
+/* Verhalten bei geraden und ungraden Tabellenreihen inkl. Hover&Pointer Effekt*/
+tr:nth-child(even) {
+  background: #DDDDDD;
+}
+tr:nth-child(even):hover {
+  background-color: @font-base-highlight;
+  cursor: pointer;
+}
+tr:nth-child(odd) {
+  background: #EEEEEE;
+}
+tr:nth-child(odd):hover {
+  background-color: @font-base-highlight2;
+  cursor: pointer;
+}
+
+/* Preisfeld hervorheben durch Formatierung */
+td.preis{
+  text-align: center;
+  font-weight: bold;
+}
+/* Setzte automatisch ein Euro-Zeichen hinter dem Preis */
+span.preis::after {
+  content: " €";
+}
+
+/* Button Formatierung*/
+input.button{
+  float: right;
+  font-weight: bold;
+  font-size: @font-size-small;
+  background-color: @color-warning;
+  border-radius: 15px 0px;
+  padding: 5px;
+}
+input.button:hover{
+  background-color: @color-warning-highlight;
+}
