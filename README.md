@@ -12,16 +12,18 @@ Dies ist das Ergebnis daraus.
 Mittels LESS wird CSS über den Compiler "prepros.io" compiliert. Im eigentlichen Projekt ist das vorweg gehende HTML Layout
 mit verschiedenen CSS Dateien eingebunden worden um so eine unterschiedliche Darstellung der Artikelgruppen zu bekommen.
 
-###ToDo:
+### Beispielcode "Kaugummilager"
 
 **mySQL**
 
-Eine Demodatenbank mit Kunden, Adressen und Retouren soll noch ein Beispiel liefern. Dabei sollen Kunden mit
-Rechnungs und Lieferaderssen mittels JOIN kombiniert werden. Ein Unternehmen kann z.B. mehrere Lieferadressen haben.
+Eine Demodatenbank liegt zur übernahme bereit und enthält erste Demo Datensätze.
 
 **PHP**
 
-Erstellt werden die Klassen "Kunde", "Adressen", "Retouren" und zur Ausgabe gebracht.
+Forumlarübergabe und SQL Handling sind hinterlegt.
+Angelegte Datensätze werden tabellarisch aufgelistet.
+Datensätze sind editierbar.
+Das Layout hat einen kleinen CSS Style.
 
 
 **Verwendet wurde:**
