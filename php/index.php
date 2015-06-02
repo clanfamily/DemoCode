@@ -47,8 +47,6 @@ if ($db_link->connect_error) {
     die("Connection failed: " . $db_link->connect_error);
 }
 
-/* SQL Handling (Validierung und SQL injection aktuell zeitbedingt nicht vorgesehen) */
-
 /* Daten Neuanlage */
 if ($form['id']=="" && $form['name']!="") {
     /*String Preis für D*/
@@ -56,21 +54,20 @@ if ($form['id']=="" && $form['name']!="") {
     $DBinsert="INSERT INTO kaugummisorten
        (id,name,geschmack,farbe,preis)
        VALUES
-       ('','".$form['name']."',".$form['geschmack'].",'".$form['farbe']."','".$form['preis']."')";
+       ('','".mysql_real_escape_string($form['name'])."',".mysql_real_escape_string($form['geschmack']).",'".mysql_real_escape_string($form['farbe'])."','".mysql_real_escape_string($form['preis'])."')";
     $querry=mysqli_query($db_link,$DBinsert)or die (mysql_error());
-    }
-
+}
 /* Daten aktualisieren wenn ID und Name übergeben wird, also nicht leer ist */
 if ($form['id'] != "" && $form['name'] != "") {
     /* Update des Datensatz*/
     $DBupdate="UPDATE kaugummisorten SET
-          name = '".$form['name']."',
-          geschmack=".$form['geschmack'].",
-          farbe='".$form['farbe']."',
-          preis='".$form['preis']."'
-    WHERE id = '".$form['id']."'";
+          name = '".mysql_real_escape_string($form['name'])."',
+          geschmack=".mysql_real_escape_string($form['geschmack']).",
+          farbe='".mysql_real_escape_string($form['farbe'])."',
+          preis='".mysql_real_escape_string($form['preis'])."'
+    WHERE id = '".mysql_real_escape_string($form['id'])."'";
     $querry=mysqli_query($db_link,$DBupdate)or die (mysql_error());
-    }
+}
 
 ?>
 <main>
