@@ -54,18 +54,18 @@ if ($form['id']=="" && $form['name']!="") {
     $DBinsert="INSERT INTO kaugummisorten
        (id,name,geschmack,farbe,preis)
        VALUES
-       ('','".mysql_real_escape_string($form['name'])."',".mysql_real_escape_string($form['geschmack']).",'".mysql_real_escape_string($form['farbe'])."','".mysql_real_escape_string($form['preis'])."')";
+       ('','".mysqli_real_escape_string($db_link,$form['name'])."',".mysqli_real_escape_string($db_link,$form['geschmack']).",'".mysqli_real_escape_string($db_link,$form['farbe'])."','".mysqli_real_escape_string($db_link,$form['preis'])."')";
     $querry=mysqli_query($db_link,$DBinsert)or die (mysql_error());
 }
 /* Daten aktualisieren wenn ID und Name übergeben wird, also nicht leer ist */
 if ($form['id'] != "" && $form['name'] != "") {
     /* Update des Datensatz*/
     $DBupdate="UPDATE kaugummisorten SET
-          name = '".mysql_real_escape_string($form['name'])."',
-          geschmack=".mysql_real_escape_string($form['geschmack']).",
-          farbe='".mysql_real_escape_string($form['farbe'])."',
-          preis='".mysql_real_escape_string($form['preis'])."'
-    WHERE id = '".mysql_real_escape_string($form['id'])."'";
+          name = '".mysqli_real_escape_string($db_link,$form['name'])."',
+          geschmack=".mysqli_real_escape_string($db_link,$form['geschmack']).",
+          farbe='".mysqli_real_escape_string($db_link,$form['farbe'])."',
+          preis='".mysqli_real_escape_string($db_link,$form['preis'])."'
+    WHERE id = '".mysqli_real_escape_string($db_link,$form['id'])."'";
     $querry=mysqli_query($db_link,$DBupdate)or die (mysql_error());
 }
 
